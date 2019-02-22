@@ -5,7 +5,7 @@
 
 ## Python alapok
 `#!/usr/bin/python` kell a fájl elejére
-A `#` megjegyzs sort jelöl
+A `#` megjegyzést jelöl
 
 ### Ciklus
 ````PYTHON
@@ -18,15 +18,15 @@ for i in range(1,10):
 ````Python
 mylist = [idx*idx for idx in range(0,10)]
 print(mylist)
-# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+#Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 mydict = {i:i*i for i in range(0,5) if i != 2}
 print(mydict)
-#{0: 0, 1: 1, 3: 9, 4: 16}
+#Output: {0: 0, 1: 1, 3: 9, 4: 16}
 
 mytuple = tuple(j*j for j in range(0,3))
 print(mytuple)
-#(0, 1, 4)
+#Output: (0, 1, 4)
 ````
 
 ### Függvények
@@ -40,6 +40,11 @@ def even(number):
 for x in range(1,10):
 	if (even(x)):
 		print("paros: " + str(x))
+#Output:
+#paros: 2
+#paros: 4
+#paros: 6
+#paros: 8
 ````
 
 **Vagy**
@@ -48,12 +53,15 @@ for x in range(1,10):
 def complex(x):
 	return x**2, x**3, x**4
 print(complex(2))
+#Output: (4, 8, 16)
 
 a, b, c = complex(2)
 print(a,b,c)
+#Output: (4, 8, 16)
 
 _, rv, _ = complex(2)
 print(rv)
+#Output: 8
 ````
 
 ### Lambda függvények
@@ -64,7 +72,13 @@ is_even2 = lambda num: True if (num%2) == 0 else False
 for i in range(1,10):
 	if (is_even(i)):
 		print("paros: " + str(i))
+#Output:
+#paros: 2
+#paros: 4
+#paros: 6
+#paros: 8
 ````
+
 ### Map
 ````Python
 def fahrenheit(T):
@@ -82,8 +96,10 @@ temperatures_in_Celsius = list(map(celsius, temperatures_in_Fahrenheit))
 
 print("F: ")
 print(temperatures_in_Fahrenheit)
+#Output: [97.7, 98.60000000000001, 99.5, 100.4, 102.2]
 print("C: ")
 print(temperatures_in_Celsius)
+#Output: [36.5, 37.00000000000001, 37.5, 38.00000000000001, 39.0]
 ````
 
 ### Filterek
@@ -92,6 +108,7 @@ fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 odd_numbers = list(filter(lambda x: x%2, fibonacci))
 
 print(odd_numbers)
+#Output: [1, 1, 3, 5, 13, 21, 55]
 ````
 
 ### Fájlkezelés
@@ -101,15 +118,26 @@ with open('alma.txt', 'r') as f:
 	for line in f:
 		print(line.rstrip('\n').split(','))
 
-ff = open("demo.txt", "r")
+#Output:
+#['alma', 'korte']
+#['bela', 'geza', 'fa']
+#['fu', 'facan']
 ````
 Az egészet soronként kiolvassa:
 ````Python
 print(f.read())
+
+#Output: 
+#alma,korte
+#bela,geza,fa
+#fu,facan
 ````
 Egy sort olvas csak:
 ````Python
 print(f.readline())
+
+#Output: 
+#alma,korte
 ````
 Mindnet olvas sorban:
 ````Python
@@ -126,6 +154,27 @@ with open ('korte.txt', "w") as korte:
 ### Ester egg
 ````Python
 import this
+#The Zen of Python, by Tim Peters
+
+#Beautiful is better than ugly.
+#Explicit is better than implicit.
+#Simple is better than complex.
+#Complex is better than complicated.
+#Flat is better than nested.
+#Sparse is better than dense.
+#Readability counts.
+#Special cases aren't special enough to break the rules.
+#Although practicality beats purity.
+#Errors should never pass silently.
+#Unless explicitly silenced.
+#In the face of ambiguity, refuse the temptation to guess.
+#There should be one-- and preferably only one --obvious way to do it.
+#Although that way may not be obvious at first unless you're Dutch.
+#Now is better than never.
+#Although never is often better than *right* now.
+#If the implementation is hard to explain, it's a bad idea.
+#If the implementation is easy to explain, it may be a good idea.
+#Namespaces are one honking great idea -- let's do more of those!
 ````
 
 ## Feladatok
