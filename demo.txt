@@ -1,0 +1,3 @@
+alma,korte
+bela,geza,fa
+fu,facan
