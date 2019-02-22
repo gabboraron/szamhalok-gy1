@@ -42,7 +42,7 @@ for x in range(1,10):
 		print("paros: " + str(x))
 ````
 
-**Vagy **
+**Vagy**
 
 ````Python
 def complex(x):
