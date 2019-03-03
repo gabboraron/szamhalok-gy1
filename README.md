@@ -151,7 +151,7 @@ for x in f:
 with open ('korte.txt', "w") as korte:
 	korte.write("bla bla blablabla")
 ````
-### Ester egg
+### Easter egg
 ````Python
 import this
 #The Zen of Python, by Tim Peters
