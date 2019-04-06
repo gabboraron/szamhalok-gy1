@@ -1,4 +1,4 @@
-# GY2
+# GY1
 ## Általános infó
 * A python `2.x` ajánlott a `3.x` helyett.
 * Linux ajánlott windowsal szemben. (amúgyis :) )
