@@ -139,7 +139,7 @@ print(f.readline())
 #Output: 
 #alma,korte
 ````
-Mindnet olvas sorban:
+Mindent olvas sorban:
 ````Python
 for x in f:
     print(x)
@@ -151,6 +151,8 @@ for x in f:
 with open ('korte.txt', "w") as korte:
 	korte.write("bla bla blablabla")
 ````
+Amikor az írást befejeztük akkor **feltétlen meg kell hívni a `close()`-t a fájlra**, hogy mentődjenek a fáljba a bleeírt adatok, különben nem fog menteni! Pl: `korte.close()`
+
 ### Easter egg
 ````Python
 import this
